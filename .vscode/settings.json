@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "todo",
+            "database": "${workspaceFolder:reactapi}/mydatabase.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "qwqwe",
+            "database": "${workspaceFolder:reactapi}/mydatabase.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
