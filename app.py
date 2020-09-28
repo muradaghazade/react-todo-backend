@@ -44,10 +44,12 @@ def todos():
     elif request.method == 'POST':
         title = request.json['title']
         completed = False
-        todo = Todo(title, completed)
+        if title.strip() != "":
+            todo = Todo(title, completed)
         db.session.add(todo)
         db.session.commit()
         serialized = TodoSerializer(todo).to_dict()
+        # print(serialized)
         return jsonify(serialized)
 
 @app.route('/api/v1/todos', methods=['DELETE', "GET"])
